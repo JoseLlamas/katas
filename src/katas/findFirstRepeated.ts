@@ -34,7 +34,7 @@ function findFirstRepeated (gifts: number[]): number {
       index = ii
     }
   }
-  return index === gifts.length ? index : gifts[index]
+  return index === gifts.length ? -1 : gifts[index]
 }
 
 export { findFirstRepeated }
