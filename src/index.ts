@@ -3,22 +3,19 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 console.log('para hacer katas')
 
-function createChristmasTree (ornaments: string, height: number): string {
-  let arbolNavidad = ''
-  const canCaracteres = (height * (height + 1)) / 2
-  const canRepeticiones = Math.ceil(canCaracteres / ornaments.length)
-  let ornamentsTotal = ornaments.repeat(Math.ceil(canRepeticiones))
-  ornamentsTotal = ornamentsTotal.slice(0, canCaracteres)
-  let inicioIndex = 0
-  for (let i = height - 1, ii = 1; i >= 0; i--, ii++) {
-    arbolNavidad += ' '.repeat(i)
-    let row = ornamentsTotal.slice(inicioIndex, ii + inicioIndex)
-    row = row.replace(/(.)/g, '$1 ').trim()
-    arbolNavidad += row + '\n'
-    inicioIndex += ii
-  }
-  const repVacio = Math.floor((height + (height - 1)) / 2)
-  return arbolNavidad + (' '.repeat(repVacio) + '|\n').repeat(height)
+function calculateTime (deliveries: string[]): string {
+  return '00:00:00'
 }
 
-console.log(createChristmasTree('@^|°¬)(91{[{]}+*', 50))
+console.log(calculateTime(['00:10:00', '01:00:00', '03:30:00']))
+// '-02:20:00'
+
+console.log(calculateTime(['02:00:00', '05:00:00', '00:30:00']))
+// '00:30:00'
+
+console.log(calculateTime([
+  '00:45:00',
+  '00:45:00',
+  '00:00:30',
+  '00:00:30'
+])) // '-05:29:00'
