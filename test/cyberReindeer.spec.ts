@@ -2,7 +2,7 @@ import { describe, it } from 'node:test'
 import assert from 'node:assert'
 import { cyberReindeer } from '../src/katas/cyberReindeer.js'
 
-void describe.only('test cyberReindeer', () => {
+void describe('test cyberReindeer', () => {
   void it('a', () => {
     const expected = [
       'S..|...|..',
