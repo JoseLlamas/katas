@@ -5,9 +5,6 @@ function transformTree (tree: number[]): any {
   }
   for (let i = 1; i < tree.length; i++) {
     const elm = tree[i]
-    if (elm !== null) {
-
-    }
   }
   return response
 }

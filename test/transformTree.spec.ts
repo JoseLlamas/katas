@@ -2,7 +2,7 @@ import { describe, it } from 'node:test'
 import assert from 'node:assert'
 import { transformTree } from '../src/katas/transformTree.js'
 
-void describe.only('test para transformTree', () => {
+void describe('test para transformTree', { only: true }, () => {
   void it('entrada []', { only: true }, () => {
     const expected = null
     const actual = transformTree([])
@@ -25,7 +25,7 @@ void describe.only('test para transformTree', () => {
     const actual = transformTree([1, 2, 3])
     assert.deepEqual(actual, expected)
   })
-  void it('entrada [1, 2, 3, 4, 5]', { only: true }, () => {
+  void it('entrada [1, 2, 3, 4, 5]', () => {
     const expected = {
       value: 1,
       left: {
